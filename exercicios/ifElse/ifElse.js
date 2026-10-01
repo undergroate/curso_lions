@@ -252,3 +252,85 @@ const prompt = PromptSync();
 
 
 
+// let distancia = Number(prompt("quantos km foram rodados? R:"));
+// let litros = Number(prompt("quantos litros foram abastecidos? R:"));
+// let consumo = distancia / litros
+//     console.log (consumo)
+// if (consumo >= 10) {
+//     console.log("Consumo dentro do padrão operacional.")
+// } else 
+//     console.log("Alerta: Veículo consumindo muito combustível. Necessário agendar revisão mecânica.")
+
+
+
+
+
+
+// let salario = Number(prompt("digite o seu salario liquido. R:"))
+// let parcela = Number(prompt("qual o valor da sua parcela?"))
+// let restricao = prompt("possui restricao em seu nome? sim/nao R:")
+// let limite = salario * 0.3
+//     console.log(limite)
+
+
+
+
+
+// if (parcela <= limite && restricao === "nao"){
+//     console.log("Crédito Aprovado!")
+// } else 
+//     console.log("Crédito Negado: Parcela acima do limite ou restrição no CPF")
+
+
+
+
+
+
+// let salario = Number(prompt("qual o valor da sua hora? R:"));
+// let horas = Number(prompt("quantas horas extras foram feitas? R: "));
+// let extras = horas * 1.5
+// let pagode = extras * salario
+
+//     console.log(`O valor a receber de horas extras este mês é: R$ ${pagode} `)
+
+
+
+
+
+// let atual = Number(prompt("qual a quantidade atual? R:"));
+// let minima = Number(prompt("qual a cantidade minima? R:"));
+// let compra = minima - atual
+
+//  if (atual < minima){
+//     console.log(`Alerta: Estoque baixo! É necessário solicitar a compra de ${compra} unidades`)
+//  } else 
+//     console.log("Estoque regularizado.")
+
+
+
+
+
+// let distancia = Number(prompt("quantos km até o cliente? R:"));
+// let condicao = prompt("A entrega é considerada de risco ou urgente? (sim/nao)");
+// let taxaFixa = 20
+// let frete = taxaFixa + (distancia * 1.5)
+
+
+// if (condicao === "sim" || distancia >= 100){
+//     console.log(frete + 15 )
+// } else 
+//     console.log(frete)
+
+
+
+
+// let vendaTotal = Number(prompt("qual seu total de vendas? R:"));
+
+// if (vendaTotal >= 20000) {
+//     console.log(`sua comicao é de R$:${vendaTotal * 0.05}!`)
+// } else 
+//     console.log(`sua comicao é de R$:${vendaTotal * 0.02}!`)
+
+
+
+let valorCond = Number(prompt("digite o valor do condominio? R:"));
