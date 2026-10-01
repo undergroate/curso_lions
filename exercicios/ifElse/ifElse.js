@@ -334,3 +334,5 @@ const prompt = PromptSync();
 
 
 let valorCond = Number(prompt("digite o valor do condominio? R:"));
+let atraso = Number(prompt("quantos diasde atraso? R:"));
+let dia = prompt("")
