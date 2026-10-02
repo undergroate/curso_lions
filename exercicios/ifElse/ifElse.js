@@ -333,6 +333,12 @@ const prompt = PromptSync();
 
 
 
-let valorCond = Number(prompt("digite o valor do condominio? R:"));
-let atraso = Number(prompt("quantos diasde atraso? R:"));
-let dia = prompt("")
+// let valorCond = Number(prompt("digite o valor do condominio? R:"));
+// let atraso = Number(prompt("quantos diasde atraso? R:"));
+// let dia = prompt("O vencimento original caiu em um feriado ou final de semana? (sim/nao)");
+// let juros = atraso * 1 + (valorCond * 0.02)
+
+// if (atraso >= 0 && dia === "nao") {
+//     console.log(`valor do condominio R$: ${valorCond + juros}`)
+// } else 
+//     console.log(`valor do condominio R$:${valorCond}`)
