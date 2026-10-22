@@ -318,3 +318,119 @@ const prompt = PromptSync();
 
 
 
+
+
+// let pacoteVIP = {
+//     nomeEmpresa: prompt("Digite o nome da empresa: "),
+//     orcamentoTotal: Number(prompt("Digite o orçamento total da noite (R$): ")),
+//     openBarFechado: false, 
+//     consumoExtras: [] 
+// };
+
+// let bebida1 = prompt("Digite o nome da primeira bebida : ");
+// let bebida2 = prompt("Digite o nome da segunda bebida : ");
+// let valorTotalBebidas = Number(prompt("Digite o valor total somado dessas duas bebidas (R$): "));
+
+// pacoteVIP.consumoExtras.push(bebida1);
+// pacoteVIP.consumoExtras.push(bebida2);
+
+// pacoteVIP.orcamentoTotal = pacoteVIP.orcamentoTotal - valorTotalBebidas;
+
+// if (pacoteVIP.orcamentoTotal < 0) {
+//     pacoteVIP.openBarFechado = true; 
+//     pacoteVIP["Multa Excedente"] = 500.00;
+//     console.log("\n LIMITE EXCEDIDO: Open Bar Fechado e Multa de R$ 500,00 aplicada!");
+// } else {
+//     console.log("\n SALDO OK: Consumo faturado com sucesso dentro do orçamento.");
+// }
+
+// console.log("\n================ FECHAMENTO DO CAMAROTE ================");
+// console.log(pacoteVIP);
+// console.log("========================================================");
+
+
+
+
+
+
+// let aluno = {
+//     nome: prompt("Digite o nome do aluno: "),
+//     pontosDeLeitura: 10, 
+//     historicoDias: [
+//         { data: "20/10", paginasLidas: 15 },
+//         { data: "21/10", paginasLidas: 30 }
+//     ]
+// };
+
+// let dataHoje = prompt("Digite a data de hoje (ex: 22/10): ");
+// let paginasHoje = Number(prompt("Digite a quantidade de páginas lidas hoje: "));
+
+// let novoRegistro = {
+//     data: dataHoje,
+//     paginasLidas: paginasHoje
+// };
+
+// aluno.historicoDias.push(novoRegistro);
+
+// let ultimoRegistro = aluno.historicoDias[aluno.historicoDias.length - 1];
+
+// if (ultimoRegistro.paginasLidas > 50 && aluno.pontosDeLeitura > 0) {
+    
+//     aluno.pontosDeLeitura = aluno.pontosDeLeitura * 2;
+//     ultimoRegistro.data = ultimoRegistro.data + " - Super Leitor!";
+//     console.log("\n🔥 EXCELENTE! Multiplicou os pontos e ganhou o título de Super Leitor!");
+
+// } else if (ultimoRegistro.paginasLidas < 10) {
+    
+//     aluno.pontosDeLeitura = aluno.pontosDeLeitura / 2;
+//     console.log("\n ATENÇÃO: Ritmo baixo de leitura. Seus pontos caíram pela metade.");
+
+// } else {
+//     console.log("\n Boa! Leitura registrada com sucesso.");
+// }
+
+// console.log("\n================ PAINEL DO ALUNO ================");
+// console.log(`Nome do Aluno: ${aluno.nome}`);
+// console.log(`Pontos de Leitura: ${aluno.pontosDeLeitura}`);
+// console.log("\nHistórico de Dias Lidos:");
+// console.log(aluno.historicoDias);
+// console.log("=================================================");
+
+
+
+
+
+
+let servidor = {
+    nome: prompt("Digite o nome do servidor (ex: Servidor Principal): "),
+    capacidadeMaximaGigabytes: Number(prompt("Digite a capacidade máxima do servidor (em GB): ")),
+    sitesHospedados: [
+        { dominio: "meusite.com", tamanhoOcupadoGB: 150 }
+    ]
+};
+
+let novoDominio = prompt("Digite o domínio do novo site (ex: novosubdomain.com): ");
+let novoTamanhoGB = Number(prompt("Digite o tamanho em GB desse novo projeto web: "));
+
+let novoSite = {
+    dominio: novoDominio,
+    tamanhoOcupadoGB: novoTamanhoGB
+};
+
+let siteAntigoTamanho = servidor.sitesHospedados[0].tamanhoOcupadoGB;
+let contaTotaisGB = siteAntigoTamanho + novoTamanhoGB;
+
+
+if (contaTotaisGB <= servidor.capacidadeMaximaGigabytes) {
+        servidor.sitesHospedados.push(novoSite);
+    console.log("\n Upload Concluído! Sistema Operacional");
+
+} else {
+    servidor.alertaSobrecarga = true;
+    console.log("\n Falha: Falta de Espaço Físico. Cancele o deploy");
+
+}
+
+console.log("\n================ INSPEÇÃO DA NUVEM ================");
+console.log(servidor);
+console.log("===================================================");
