@@ -29,3 +29,6 @@ let contatos = [
         telefone: "47 99913 4975",
     }
 ]
+
+
+export default contatos;

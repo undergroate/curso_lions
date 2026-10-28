@@ -1,10 +1,10 @@
 
 
 import promptSync from "prompt-sync";
-import contato from "./contato.js";
+import contato from "./contatos.js";
 import atualizar_contato from "./atualizar_contato.js";
 import listar_contatos from "./listar_contatos.js";
-import adicionar_contato from "./adicionar_contato.js";
+import adicionar_contato from "./adicionar_contatos.js";
 
 const prompt = promptSync();
 
@@ -12,7 +12,7 @@ const prompt = promptSync();
 let opcao = -1;
 let num = -1;
 
-do{-S
+do{
 console.log("=====MENU=====");
 console.log("1 - adicionar contatos");
 console.log("2 - atualizar contatos");
