@@ -2,17 +2,7 @@ import adicionarContato from "./adicionar_contatos.js";
 import promptSync from "prompt-sync";
 
 
-
-
-
-
-
-
-
-
 const prompt = promptSync();
-
-
 
 
 let contatos = [

@@ -24,7 +24,7 @@ opcao = Number(prompt("escolha uma opção:"))
 switch(opcao){
     case 1:
         console.log("qual numero deseja adicionar?")
-        num = Number(prompt("R:"));
+        num = prompt.toLowerCase("R:");
         adicionarContato(num)
         break
     case 2:
