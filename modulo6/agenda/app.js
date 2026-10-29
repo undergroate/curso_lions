@@ -5,6 +5,7 @@ import contato from "./contatos.js";
 import atualizar_contato from "./atualizar_contato.js";
 import listar_contatos from "./listar_contatos.js";
 import adicionar_contato from "./adicionar_contatos.js";
+import excluir_contatos from "./exluir_contatos.js"
 
 const prompt = promptSync();
 
@@ -23,18 +24,33 @@ console.log("0 - sair");
 opcao = Number(prompt("escolha uma opção:"))
 switch(opcao){
     case 1:
-        console.log("qual numero deseja adicionar?")
-        num = prompt.toLowerCase("R:");
-        adicionarContato(num)
+            case 1:
+            console.log("=== ADICIONAR NOVO CONTATO ===");
+            let nome = prompt("Qual seu nome? ");
+            let email = prompt("Qual seu email? ");
+            let telefone = prompt("Qual seu telefone? ");
+
+            let novocontato = {
+                nome: nome,
+                email: email,
+                telefone: telefone
+            };
+
+
+            adicionar_contato(contato, novocontato);
+            break;
+
         break
     case 2:
         atualizarContatos();
         break    
     case 3:
-        console.table(contatos);
+        console.table(contato
+
+        );
         break
     case 4:
-        removerContatos();
+        excluir_contatos();
         break    
     case 0:
         console.log("fechando programa...");
