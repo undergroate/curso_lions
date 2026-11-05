@@ -42,12 +42,10 @@ switch(opcao){
 
         break
     case 2:
-        atualizarContatos();
+        atualizar_Contato();
         break    
     case 3:
-        console.table(contato
-
-        );
+        console.table(contato);
         break
     case 4:
         excluir_contatos();
