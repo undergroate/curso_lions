@@ -1,6 +1,8 @@
 import express from 'express';
 import contatos from './contatos.js';
 import deletar from './deletar.js';
+import adicionar from './adicionar.js';
+import atualizar from './atualizar.js';
 
 const app = express();
 const port = 3000;
@@ -36,6 +38,50 @@ if (!contato) {
 
 res.json(contato);
 });
+
+
+// app.put('/contatos/:id', validar, (req, res) => {
+//   const id = parseInt(req.params.id);
+//   const { nome, email, telefone } = req.body;
+
+//   if (!nome || !email || !telefone) {
+//     return res.status(400).send("Todos os campos são obrigatórios");
+//   }
+
+//   const contatoAtualizado = atualizar(contatos, id, nome, email, telefone);
+
+//   if (!contatoAtualizado) {
+//     return res.status(404).send("Contato não encontrado");
+//   }
+
+//   res.status(200).json(contatoAtualizado);
+// });
+
+
+app.put('/contatos/:id', validar, (req, res) => {
+    const contatoAtualizado = req.body;
+    const id = parseInt(req.params.id);
+
+    if (!atualizado) {
+        return res.status(400).send("Todos os campos são obrigatórios");
+    }
+
+    res.status(200).send("Contato atualizado com sucesso");
+});
+
+
+app.post('/contatos', (req, res) => {
+  const { nome, email, telefone } = req.body;
+
+  if (!nome || !email || !telefone) {
+    return res.status(400).send("Todos os campos são obrigatórios");
+  }
+
+  const novoContato = adicionar(contatos, nome, email, telefone);
+
+  res.status(201).json(novoContato);
+});
+
 
 app.delete('/contatos/:id', validar, (req, res) => {
     const id = parseInt(req.params.id);
