@@ -1,0 +1,7 @@
+# ignora todas as pastas de dependencia do node.js
+node_modules/
+
+# ignora todos os arquivos de variaveis de ambiente(em qualquer pasta )
+**/.env 
+**/.env.*
+!**/.env.example
