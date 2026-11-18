@@ -4,7 +4,4 @@ node_modules/
 # ignora todos os arquivos de variaveis de ambiente(em qualquer pasta )
 **/.env 
 **/.env.*
-
-#build e cobertura
-dist/
-.vite?
+!**/.env.example
