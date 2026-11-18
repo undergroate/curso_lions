@@ -9,6 +9,8 @@ conectarBanco();
 const app = express();
 const PORT = Number(process.env.PORT)
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
   res.send("contatos");
 });
