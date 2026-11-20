@@ -65,7 +65,7 @@ app.post('/contatos', async (req, res) => {
     res.status(201).json(contato);
   } catch (error) {
     if(error.code === 11000) {
-      res.status(409).json({mensagem: "erro: email já cadastrado "});
+      return res.status(409).json({mensagem: "erro: email já cadastrado "});
     }
     res.status(400).json({mensagem: `Erro ao cadastrar contato: ${error.message}`});
   }
