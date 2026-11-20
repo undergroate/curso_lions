@@ -31,5 +31,3 @@ export default contato;
 
 const produto = mongoose.model("Produto", newSchema);
 export default produto;
-
-await produto.create({
