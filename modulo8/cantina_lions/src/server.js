@@ -1,8 +1,7 @@
-require('dotenv').config();
-const express = require('express');
-const conectarBanco = require('./db');
-const Pedido = require('./models/pedido');
-
+import 'dotenv/config';
+import express from 'express';
+import conectarBanco from './db.js';
+import Pedido from './models/pedido.js';
 const app = express();
 
 // Permite que o servidor entenda dados enviados no formato JSON
@@ -92,12 +91,11 @@ app.get('/pedidos/busca', async (req, res) => {
 app.patch('/pedidos/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const { status } = req.body;
 
     const pedidoAtualizado = await Pedido.findByIdAndUpdate(
       id,
-      { status },
-      { new: true, runValidators: true }
+      req.body,
+      { returnDocument: 'after', runValidators: true }
     );
 
     if (!pedidoAtualizado) {
@@ -106,10 +104,9 @@ app.patch('/pedidos/:id', async (req, res) => {
 
     return res.status(200).json(pedidoAtualizado);
   } catch (erro) {
-    return res.status(400).json({ erro: 'Erro ao atualizar status', detalhes: erro.message });
+    return res.status(400).json({ erro: 'Erro ao atualizar pedido', detalhes: erro.message });
   }
 });
-
 // ==========================================
 // 3.5 REMOVER PEDIDO (DELETE)
 // ==========================================

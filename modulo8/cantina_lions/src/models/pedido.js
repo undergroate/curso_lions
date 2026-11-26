@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const pedidoSchema = new mongoose.Schema({
   nomeCliente: {
@@ -39,4 +39,4 @@ const pedidoSchema = new mongoose.Schema({
 
 const Pedido = mongoose.model('Pedido', pedidoSchema);
 
-module.exports = Pedido;
+export default Pedido;
